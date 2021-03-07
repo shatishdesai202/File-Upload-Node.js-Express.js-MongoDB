@@ -57,15 +57,13 @@ app.post('/', upload, (req, res, next) => {
             getImage.exec( (err, doc)=>{
                 if (err){ throw err;}
                 else{
-
                     res.render('form', {
                         title: 'image upload in node',
                         success: success,
                         image:doc
                     });
                 }
-            });
-            
+            });   
         }
     });
 });
